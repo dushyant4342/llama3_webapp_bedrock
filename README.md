@@ -11,12 +11,15 @@ dushyant1334/llama38b:latest
 
 
 docker ps
+
 docker images -a
+
 docker stop conatiner_id
 
 docker rm $(docker ps -a -q) #remove all containers
 
 docker login
+
 docker push dushyant1334/llama38b:latest
 
 docker rmi -f $(docker images -q) #Delete all docker images
@@ -34,7 +37,9 @@ dushyant1334/llama38b:latest
 #create virtual env 
 pwd
 /Users/dushyantsharma/Desktop/awsfreetier/awsbedrock
+
 python3 -m venv /Users/dushyantsharma/Desktop/awsfreetier/awsbedrock/venv (make a virutal env)
+
 source /Users/dushyantsharma/Desktop/awsfreetier/awsbedrock/venv/bin/activate (activate virutal env)
 
 pip install -r requirements.txt 
@@ -42,7 +47,10 @@ pip install -r requirements.txt
 #go to iam console to create user and create access key
 
 Purchased LLama3:8B instruct to work
+
 #Llama 3 8B Instruct
+
+Sample API json
 
 <!-- 
 {
