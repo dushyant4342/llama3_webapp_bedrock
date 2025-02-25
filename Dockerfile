@@ -1,8 +1,14 @@
-# Use Amazon Linux base image
+# Use Amazon Linux 2023 as base image
 FROM amazonlinux:2023
 
 # Set working directory
 WORKDIR /app
+
+# Install Python 3.9 and pip
+RUN yum update -y && \
+    yum install -y python3 python3-pip && \
+    ln -s /usr/bin/python3 /usr/bin/python && \ 
+    ln -s /usr/bin/pip3 /usr/bin/pip  #(can run pip install instead of pip3 install.)
 
 # Copy files from GitHub repo
 COPY . .
@@ -13,7 +19,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose the Streamlit default port
 EXPOSE 8501
 
-# Run the Streamlit app (This ensures that when the container starts, it automatically runs the Streamlit app.)
+# Run the Streamlit app
 CMD ["streamlit", "run", "llama3.py", "--server.port=8501", "--server.address=0.0.0.0"]
-
-
