@@ -8,7 +8,9 @@ WORKDIR /app
 RUN yum update -y && \
     yum install -y python3 python3-pip && \
     ln -s /usr/bin/python3 /usr/bin/python && \ 
-    ln -s /usr/bin/pip3 /usr/bin/pip  #(can run pip install instead of pip3 install.)
+    ln -s /usr/bin/pip3 /usr/bin/pip  
+
+# (ln -s symbolic link which can run pip install instead of pip3 install.)
 
 # Copy files from GitHub repo
 COPY . .
