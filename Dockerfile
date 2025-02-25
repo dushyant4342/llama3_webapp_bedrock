@@ -7,8 +7,8 @@ WORKDIR /app
 # Install Python 3.9 and pip
 RUN yum update -y && \
     yum install -y python3 python3-pip && \
-    ln -s /usr/bin/python3 /usr/bin/python && \ 
-    ln -s /usr/bin/pip3 /usr/bin/pip  
+    ln -sf /usr/bin/python3 /usr/bin/python && \ 
+    ln -sf /usr/bin/pip3 /usr/bin/pip  
 
 # (ln -s symbolic link which can run pip install instead of pip3 install.)
 
