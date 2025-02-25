@@ -1,3 +1,5 @@
+# Deployment of LLama3 Text Generation Web app in an EC2 Instance usning Docker conatiner & Github
+
 docker build -t dushyant1334/llama38b:latest . (build image)
 
 
